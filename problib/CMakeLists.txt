@@ -58,3 +58,11 @@ add_dependencies(problib ${catkin_EXPORTED_TARGETS})
 # add test executable
 add_executable(problib_test src/test.cpp)
 target_link_libraries(problib_test problib)
+
+install(TARGETS problib
+        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION})
+
+install(DIRECTORY include/${PROJECT_NAME}/
+        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})

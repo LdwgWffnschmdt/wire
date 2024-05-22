@@ -94,3 +94,12 @@ if(CATKIN_ENABLE_TESTING)
   target_link_libraries(test_parser wire)
   add_dependencies(test_parser test_plugin)
 endif()
+
+### INSTALL
+install(TARGETS wire
+        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION})
+
+install(DIRECTORY include/wire/
+        DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}/wire)

@@ -31,3 +31,13 @@ target_link_libraries(position_estimator ${catkin_LIBRARIES})
 target_link_libraries(multimodel_estimator ${catkin_LIBRARIES})
 target_link_libraries(discrete_estimator ${catkin_LIBRARIES})
 target_link_libraries(fixed_estimator ${catkin_LIBRARIES})
+
+
+### INSTALL
+install(TARGETS position_estimator multimodel_estimator discrete_estimator fixed_estimator
+        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION})
+
+#install(DIRECTORY include/${PROJECT_NAME}/
+#        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})

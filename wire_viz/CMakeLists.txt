@@ -42,3 +42,13 @@ target_link_libraries(wire_viz ${catkin_LIBRARIES})
 # ROS nodes
 add_executable(visualization src/visualization.cpp)
 target_link_libraries(visualization wire_viz)
+
+
+### INSTALL
+install(TARGETS wire_viz
+        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION})
+
+install(DIRECTORY include/${PROJECT_NAME}/
+        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
