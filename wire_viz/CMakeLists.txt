@@ -52,3 +52,13 @@ install(TARGETS wire_viz
 
 install(DIRECTORY include/${PROJECT_NAME}/
         DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
+
+## Mark launch files for installation
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
+
+## Mark parameter files for installation
+install(DIRECTORY parameters/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/parameters
+)

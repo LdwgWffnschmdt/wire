@@ -103,3 +103,26 @@ install(TARGETS wire
 
 install(DIRECTORY include/wire/
         DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}/wire)
+
+install(TARGETS wire_server
+        RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+## Mark database files for installation
+install(DIRECTORY database/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/database
+)
+
+## Mark model files for installation
+install(DIRECTORY models/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/models
+)
+
+## Mark parameter files for installation
+install(DIRECTORY parameters/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/parameters
+)
+
+## Mark launch files for installation
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
