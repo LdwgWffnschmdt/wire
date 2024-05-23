@@ -41,3 +41,8 @@ install(TARGETS position_estimator multimodel_estimator discrete_estimator fixed
 
 #install(DIRECTORY include/${PROJECT_NAME}/
 #        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
+
+## Mark parameter files for installation
+install(FILES models_plugin.xml
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
